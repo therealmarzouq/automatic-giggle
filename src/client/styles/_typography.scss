@@ -1,0 +1,94 @@
+// /* Set the font size to 26px */
+.h1 {
+  font-size: $h1-size-mobile !important;
+  @include respond-to(md) {
+    font-size: $h1-size !important;
+  }
+}
+/* Set the font size to 22px */
+.h2 {
+  font-size: $h2-size-mobile !important;
+  @include respond-to(md) {
+    font-size: $h2-size !important;
+  }
+}
+/* Set the font size to 18px */
+.h3 {
+  font-size: $h3-size-mobile !important;
+  @include respond-to(md) {
+    font-size: $h3-size !important;
+  }
+}
+/* Set the font size to #{$h4-size} */
+.h4 {
+  font-size: $h4-size !important;
+}
+/* Set the font size to #{$h5-size} */
+.h5 {
+  font-size: $h5-size !important;
+}
+/* Set the font size to #{$h6-size} */
+.h6 {
+  font-size: $h6-size !important;
+}
+
+// Heading Utilities
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: $font-weight-bold !important;
+}
+
+.f6 {
+  font-size: $h6-size !important;
+}
+
+// Line-height Variations
+// Responsive line-height
+@each $breakpoint, $variant in $responsive-variants {
+  @include respond-to($breakpoint) {
+    /* Set the line height to ultra condensed */
+    .lh#{$variant}-condensed-ultra {
+      line-height: $lh-condensed-ultra !important;
+    }
+    /* Set the line height to condensed */
+    .lh#{$variant}-condensed {
+      line-height: $lh-condensed !important;
+    }
+    /* Set the line height to default */
+    .lh#{$variant}-default {
+      line-height: $lh-default !important;
+    }
+    /* Set the line height to zero */
+    .lh#{$variant}-0 {
+      line-height: 0 !important;
+    }
+  }
+}
+
+// Text Alignments
+// Responsive Text Alignment
+@each $breakpoint, $variant in $responsive-variants {
+  @include respond-to($breakpoint) {
+    /* Text align to the right */
+    .text#{$variant}-right {
+      text-align: right !important;
+    }
+    /* Text align to the left */
+    .text#{$variant}-left {
+      text-align: left !important;
+    }
+    /* Text align to the center */
+    .text#{$variant}-center {
+      text-align: center !important;
+    }
+  }
+}
+
+// Text Styles
+.text-bold {
+  font-weight: $font-weight-bold !important;
+}
